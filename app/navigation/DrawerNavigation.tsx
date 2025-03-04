@@ -12,6 +12,7 @@ import Chat from '../screens/Chat';
 import Images from '../screens/Images';
 import ApiKeyPage from '../screens/ApiKey';
 import Whisper from '../screens/Whisper';
+import { useAuth } from '../../src/contexts/AuthContext';
 
 
 type DrawerParamList = {
@@ -24,6 +25,7 @@ type DrawerParamList = {
 const Drawer = createDrawerNavigator<DrawerParamList>();
 
 const CustomDrawerContent = (props: DrawerContentComponentProps) => {
+    const { signOut } = useAuth();
 
     const openUsagePage = () => {
         WebBrowser.openBrowserAsync('https://platform.openai.com/account/usage');
@@ -64,6 +66,12 @@ const CustomDrawerContent = (props: DrawerContentComponentProps) => {
                     labelStyle={styles.drawerItemLabel}
                     icon={() => <Ionicons name='podium-outline' size={24} color='white' />}
                     onPress={openUsagePage}
+                />
+                <DrawerItem
+                    label='Sign Out'
+                    labelStyle={styles.drawerItemLabel}
+                    icon={() => <Ionicons name='log-out-outline' size={24} color='white' />}
+                    onPress={signOut}
                 />
             </View>
         </View>

@@ -7,7 +7,6 @@ import * as WebBrowser from 'expo-web-browser';
 import * as AuthSession from 'expo-auth-session';
 import Constants from 'expo-constants';
 import {useAuth} from '../contexts/AuthContext';
-import {ajax} from "rxjs/internal/ajax/ajax";
 
 WebBrowser.maybeCompleteAuthSession();
 
