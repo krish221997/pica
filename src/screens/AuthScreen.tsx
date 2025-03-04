@@ -49,8 +49,9 @@ export default function AuthScreen() {
                     }
                 }).then(response => response.json())
                     .then(data => {
-                        console.log(data)
-                        signIn({ /* user data */});
+                        if (data.token) {
+                            signIn(data);
+                        }
                     })
             }
         } catch (error) {

@@ -35,19 +35,19 @@ const CustomDrawerContent = (props: DrawerContentComponentProps) => {
         <View style={styles.container}>
             <DrawerContentScrollView {...props}>
                 <DrawerItem
-                    label='ChatGPT'
+                    label='PicaChat'
                     labelStyle={styles.drawerItemLabel}
                     icon={() => <Ionicons name='create-outline' size={24} color='white' />}
                     onPress={() => props.navigation.navigate('Chat')}
                 />
-                <DrawerItem
+                {/* <DrawerItem
                     label='DALL·E'
                     labelStyle={styles.drawerItemLabel}
                     icon={() => <Ionicons name='image-outline' size={24} color='white' />}
                     onPress={() => props.navigation.navigate('Images')}
-                />
+                /> */}
                 <DrawerItem
-                    label='Whisper'
+                    label='PicaVoice'
                     labelStyle={styles.drawerItemLabel}
                     icon={() => <Ionicons name='mic-outline' size={24} color='white' />}
                     onPress={() => props.navigation.navigate('Whisper')}
@@ -55,7 +55,7 @@ const CustomDrawerContent = (props: DrawerContentComponentProps) => {
             </DrawerContentScrollView>
 
             <View style={styles.footerContainer}>
-                <DrawerItem
+                {/* <DrawerItem
                     label='API Key'
                     labelStyle={styles.drawerItemLabel}
                     icon={() => <Ionicons name='key-outline' size={24} color='white' />}
@@ -66,7 +66,7 @@ const CustomDrawerContent = (props: DrawerContentComponentProps) => {
                     labelStyle={styles.drawerItemLabel}
                     icon={() => <Ionicons name='podium-outline' size={24} color='white' />}
                     onPress={openUsagePage}
-                />
+                /> */}
                 <DrawerItem
                     label='Sign Out'
                     labelStyle={styles.drawerItemLabel}
